@@ -1,0 +1,40 @@
+<ion-content>
+  <div class="flex-center">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title color="success">Test Login</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <ion-item>
+            <ion-label position="floating">UserName</ion-label>
+            <ion-input type="text" placeholder="UserName" formControlName="username"></ion-input>
+          </ion-item>
+          <div *ngIf="submitted && loginForm.get('username')?.errors?.required" id="test">
+            *Please add Username
+          </div>
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+          </ion-item>
+          <div *ngIf="submitted && loginForm.get('password')?.errors?.required" id="test">
+            *Please add Password
+          </div>
+          <ion-button color="success" type="submit" expand="block">
+            Login
+          </ion-button>
+          <ion-row>
+            <ion-col size="12">
+              <ion-button color="dark" (click)="forgtPassword()" expand="block" fill="clear">
+                Forget Username/Password
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-button color="success" (click)="register()" expand="block" fill="clear">
+            Register
+          </ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

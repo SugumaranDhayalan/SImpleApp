@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+       <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Test App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list color="success">
+    <ion-item color="success">
+      <ion-avatar slot="start">
+        <img src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" />
+      </ion-avatar>
+      <ion-label>
+        <h1>First Tester</h1>
+        <p>Amount Consumed: <span class="money">$25</span></p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Amount Consumed On Last Time Delivery</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="none">
+        <ion-icon slot="start" name="hourglass-outline" color="warning"></ion-icon>
+        <ion-label>
+          <span class="money">$10</span>
+          <p>{{date}}</p>
+        </ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label>
+          <p>Created at {{date}}</p>
+          <p>Notes: Amount consumed for maintenance and for fuel</p>
+        </ion-label>
+      </ion-item>
+      <ion-button fill="clear" color="success" size="full">
+        See More...
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+ <ion-fab vertical="bottom" horizontal="end" slot="fixed" >
+   <ion-fab-button color="success" (click)="onClick()">
+     <ion-icon name="add"></ion-icon>
+   </ion-fab-button>
+ </ion-fab>
+
+</ion-content>

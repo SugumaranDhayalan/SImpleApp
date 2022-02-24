@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Simple Test Page</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img src="https://www.w3schools.com/images/w3schools_green.jpg"></ion-img>
+  <ion-card>
+    <ion-card-content>
+      <p>Hi!</p>
+      <p>Hello!</p>
+      <p>Gud Mrn!</p>
+      <p>Shall we proceed further ???</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-item>
+    <ion-label position="floating">Notes</ion-label>
+    <ion-textarea></ion-textarea>
+  </ion-item>
+  <ion-button (click)="onClick()" size="full" color="success">
+    Add new value
+  </ion-button>
+</ion-content>
